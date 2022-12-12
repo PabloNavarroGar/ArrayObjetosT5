@@ -2,7 +2,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
-package claseviernes;
+package VehiculosArrays;
 
 import java.util.Objects;
 import java.util.Random;
@@ -25,6 +25,7 @@ public class Vehiculo {
      public Vehiculo(){
          this.bastidor= RandomStringUtils.randomAlphabetic(5);
          this.matricula=RandomStringUtils.randomNumeric(4);
+         this.modelo = Modelo.getAleatorio();
      }
      
 
