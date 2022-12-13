@@ -113,17 +113,20 @@ public class CatalogoVehiculos {
     }
     
     
-    //Metodo Copiar
+    //Metodo Copiar vehiculo que devuelva un array con ese 
     //
-    private  int[] copiarVehiculo(){
-    int [] arrayAux= new int[this.numeroVehiculos];
+    public void copiarVehiculo(){
+    int[] arrayAux= new int[this.numeroVehiculos];
          
-         for (int i = 0; i < this.listaVehiculos.length; i++) {
-           arrayAux[i] = this.numeroVehiculos;
+       //Copia del vehiculo
+        for (int i = 0; i < this.listaVehiculos.length; i++) {
+           arrayAux[i] = this.listaVehiculos[i];
             
+           arrayAux[0]++;
         }
-    
-    return arrayAux;
+     
+       }
+           
 }
 
 }

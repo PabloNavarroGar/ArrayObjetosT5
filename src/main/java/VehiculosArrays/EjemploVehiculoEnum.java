@@ -55,6 +55,12 @@ public class EjemploVehiculoEnum {
         Cliente c1 = new Cliente("Juan", "Palomo");
         
         System.out.println(c1);
+        
+        
+        System.out.println("--------CATALOGO DE CLIENTES------------");
+        CatalogoCliente clientes = new CatalogoCliente(10);
+        
+        System.out.println(clientes);
 //        System.out.println(" ");
 //        System.out.println(" ");
 //        System.out.println("-----------CATALOGO DE VEHICULOS-----------------");
