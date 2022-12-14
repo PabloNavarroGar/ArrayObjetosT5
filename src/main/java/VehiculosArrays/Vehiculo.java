@@ -19,14 +19,19 @@ public class Vehiculo {
      private Modelo modelo;
      private boolean disponible;
      private double tarifa;
-     
+     private static int contador=0;
      //Constructor sin parametros que genere vehicuos diferentes con datos diferentes
      //FALTA METER EN EL POM LAS DEPENDECIAS CORRESPONDIENTES. 
      public Vehiculo(){
-         this.bastidor= RandomStringUtils.randomAlphabetic(5);
+         
+         this.bastidor= String.valueOf(++contador);
          this.matricula=RandomStringUtils.randomNumeric(4);
          this.modelo = Modelo.getAleatorio();
+         this.color= Color.getAleatorio();
      }
+     
+     
+    
      
 
     @Override

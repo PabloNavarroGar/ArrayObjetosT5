@@ -43,14 +43,27 @@ public class CatalogoVehiculos {
     }
 
     //Es una busqueda secuencial , va desde 0 hasta el ultimo
-    public int buscarVehiculo(Vehiculo v) {
-        for (int i = 0; i < this.listaVehiculos.length; i++) {
-            if (v.equals(this.listaVehiculos[i])) {
-                return i;
+    private int buscarVehiculo(Vehiculo v) {
+        //se le para el objeto como parametro
+        if (c != null) {
+            for (int i = 0; i < this.listaClientes.length; i++) {
+                if (this.listaClientes[i] != null && c.equals(this.listaClientes[i])) {
+                    return i;
+                }
             }
         }
-        //Como no encuetra ese bastidor duevuelve -1
+        //Como no encuetra ese cliente duevuelve -1
         return -1;
+    }
+
+    public Cliente buscarCliente(String nif) {
+        Cliente aux = new Cliente();
+
+        aux.setNif(nif);//Fuerzo a que el cliente tenga el nif que busco
+        int posicion = buscarCliente(aux);
+
+        return (posicion >= 0) ? this.listaClientes[posicion] : null;
+
     }
 
     public boolean borrarVehiculo(Vehiculo v) {
@@ -88,8 +101,8 @@ public class CatalogoVehiculos {
             //Se le pone un *2 al final, que quiere decir que el nuevo Array tiene el doble de tamaño que la orignal,(eficiencia)
             //Para evitar confusiones le sumo, ya el ++ a continuacion y luego pongo el metodo y me olvido
             this.numeroVehiculos++;//Aqui ya valdria 11
-            this.listaVehiculos= Arrays.copyOf(listaVehiculos, numeroVehiculos);
-            this.listaVehiculos[this.numeroVehiculos-1]=v;//En la posicion 10 le guardo el vehiculo
+            this.listaVehiculos = Arrays.copyOf(listaVehiculos, numeroVehiculos);
+            this.listaVehiculos[this.numeroVehiculos - 1] = v;//En la posicion 10 le guardo el vehiculo
         }
 
     }
@@ -111,22 +124,7 @@ public class CatalogoVehiculos {
         }
         return tmp;
     }
-    
-    
+
     //Metodo Copiar vehiculo que devuelva un array con ese 
     //
-    public void copiarVehiculo(){
-    int[] arrayAux= new int[this.numeroVehiculos];
-         
-       //Copia del vehiculo
-        for (int i = 0; i < this.listaVehiculos.length; i++) {
-           arrayAux[i] = this.listaVehiculos[i];
-            
-           arrayAux[0]++;
-        }
-     
-       }
-           
-}
-
 }

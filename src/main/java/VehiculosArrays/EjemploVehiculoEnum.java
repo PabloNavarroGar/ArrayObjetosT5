@@ -4,6 +4,8 @@
  */
 package VehiculosArrays;
 
+import java.time.LocalDate;
+
 /**
  *
  * @author tomas
@@ -22,45 +24,52 @@ public class EjemploVehiculoEnum {
 //        System.out.println("color" + Color.getAleatorio());
         //Vehiculo v = new Vehiculo();
         //System.out.println(v);
-        System.out.println("-----Muestra del Catalogo------");
-        CatalogoVehiculos catalogo = new CatalogoVehiculos(10);
-        System.out.println(catalogo);
-
-        catalogo.borrarVehiculo(catalogo.getListaVehiculos()[3]);
-
-        System.out.println("DESPUES DE BORRAR EL VEHICULO");
-        System.out.println("Numero de Vehiculos en el catalogo despue sde borrar " + catalogo.getNumeroVehiculos());
-
-        System.out.println(catalogo);
-
-        Vehiculo aux = new Vehiculo();
-        aux.setBastidor("123456");
-        catalogo.anadirVehiculo(aux);
-
-        System.out.println("Nº de Vehiculos en el catalogo" + catalogo.getNumeroVehiculos());
-
-        System.out.println(catalogo);
-        
-        
-        aux.setBastidor("99999");
-        
-        catalogo.anadirVehiculo(aux);
-        
-        
-        System.out.println("Nº de Vehiculos en el catalogo"+catalogo.getNumeroVehiculos());
-        
-        
-        System.out.println(catalogo);
-
-        Cliente c1 = new Cliente("Juan", "Palomo");
-        
-        System.out.println(c1);
-        
-        
-        System.out.println("--------CATALOGO DE CLIENTES------------");
-        CatalogoCliente clientes = new CatalogoCliente(10);
-        
-        System.out.println(clientes);
+//        System.out.println("-----Muestra del Catalogo------");
+//        CatalogoVehiculos catalogo = new CatalogoVehiculos(10);
+//        System.out.println(catalogo);
+//
+//        catalogo.borrarVehiculo(catalogo.getListaVehiculos()[3]);
+//
+//        System.out.println("DESPUES DE BORRAR EL VEHICULO");
+//        System.out.println("Numero de Vehiculos en el catalogo despue sde borrar " + catalogo.getNumeroVehiculos());
+//
+//        System.out.println(catalogo);
+//
+//        Vehiculo aux = new Vehiculo();
+//        aux.setBastidor("123456");
+//        catalogo.anadirVehiculo(aux);
+//
+//        System.out.println("Nº de Vehiculos en el catalogo" + catalogo.getNumeroVehiculos());
+//
+//        System.out.println(catalogo);
+//        
+//        
+//        aux.setBastidor("99999");
+//        
+//        catalogo.anadirVehiculo(aux);
+//        
+//        
+//        System.out.println("Nº de Vehiculos en el catalogo"+catalogo.getNumeroVehiculos());
+//        
+//        
+//        System.out.println(catalogo);
+//
+//        Cliente c1 = new Cliente("Juan", "Palomo");
+//        
+//        System.out.println(c1);
+//        
+//        
+//        System.out.println("--------CATALOGO DE CLIENTES------------");
+//        CatalogoCliente clientes = new CatalogoCliente(10);
+//        System.out.println("Nº del catalaogot de los clientes "+clientes.getNumeroCLientes());
+//        System.out.println(clientes);
+//        System.out.println("------------------------------------------");
+//         CatalogoCliente clientes2 = new CatalogoCliente(10);
+//        System.out.println("Nº del catalaogot de los clientes "+clientes2.getNumeroCLientes());
+//        System.out.println(clientes2);
+//        
+//        
+//        Cliente cli = clientes.buscarCliente("9");
 //        System.out.println(" ");
 //        System.out.println(" ");
 //        System.out.println("-----------CATALOGO DE VEHICULOS-----------------");
@@ -81,6 +90,33 @@ public class EjemploVehiculoEnum {
 //        catalogo.borrarVehiculo(catalogo.getListaVehiculos()[4]);
 //        System.out.println("------------------ DESPUES DE BORRAR ------------------");
 //        catalogo .mostrarCatalogo();
+
+    
+        CatalogoVehiculos cv = new CatalogoVehiculos(10);
+        CatalogoCliente cc = new CatalogoCliente(10);
+         
+        
+        System.out.println(cv);
+        
+        System.out.println(cc);
+        Cliente c = cc.buscarCliente("3");
+        
+        Vehiculo v = cv.buscarVehiculo("4");
+
+       
+
+        Alquiler a = new Alquiler(c, v, LocalDate.now(), 1);
+        System.out.println(c);
+        System.out.println(v);
+        System.out.println(a);
+        
+        CatalogoAlquiler ca = new CatalogoAlquiler(10);
+        
+        ca.anadirAlquiler(a);
+        
+        System.out.println("Lista de alquileres");
+        
+        System.out.println(ca);
     }
 
 }
