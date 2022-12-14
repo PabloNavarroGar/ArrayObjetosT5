@@ -99,24 +99,33 @@ public class EjemploVehiculoEnum {
         System.out.println(cv);
         
         System.out.println(cc);
-        Cliente c = cc.buscarCliente("3");
-        
-        Vehiculo v = cv.buscarVehiculo("4");
-
+      
        
-
-        Alquiler a = new Alquiler(c, v, LocalDate.now(), 1);
+       
+        System.out.println("Metodo de buscarCliente");
+        Cliente c = cc.buscarCliente("3");
         System.out.println(c);
-        System.out.println(v);
-        System.out.println(a);
+        System.out.println("-------------------");
+        System.out.println("Metodo de buscarVehiculo");
+         Vehiculo v1 = cv.buscarVehiculo("1");
+         
+         System.out.println(v1);
+       
         
-        CatalogoAlquiler ca = new CatalogoAlquiler(10);
+
         
-        ca.anadirAlquiler(a);
+//        Alquiler a = new Alquiler(c, vehiculo1, LocalDate.now(), 1);
+//        System.out.println(c);
+//        System.out.println(vehiculo1);
+//        System.out.println(a);
         
-        System.out.println("Lista de alquileres");
+        //CatalogoAlquiler ca = new CatalogoAlquiler(10);
         
-        System.out.println(ca);
+       // ca.anadirAlquiler(a);
+        
+//        System.out.println("Catalogo de alquileres");
+//        
+//        System.out.println(ca);
     }
 
 }

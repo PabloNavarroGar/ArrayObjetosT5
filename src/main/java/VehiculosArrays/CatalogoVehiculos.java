@@ -45,25 +45,25 @@ public class CatalogoVehiculos {
     //Es una busqueda secuencial , va desde 0 hasta el ultimo
     private int buscarVehiculo(Vehiculo v) {
         //se le para el objeto como parametro
-        if (c != null) {
-            for (int i = 0; i < this.listaClientes.length; i++) {
-                if (this.listaClientes[i] != null && c.equals(this.listaClientes[i])) {
+        if (v != null) {
+            for (int i = 0; i < this.listaVehiculos.length; i++) {
+                if (this.listaVehiculos[i] != null && v.equals(this.listaVehiculos[i])) {
                     return i;
                 }
             }
         }
-        //Como no encuetra ese cliente duevuelve -1
+        //Como no encuentra ese cliente devuelve -1
         return -1;
     }
 
-    public Cliente buscarCliente(String nif) {
-        Cliente aux = new Cliente();
+    public Vehiculo buscarVehiculo(String bastidor) {
+      
+         Vehiculo aux = new Vehiculo();
 
-        aux.setNif(nif);//Fuerzo a que el cliente tenga el nif que busco
-        int posicion = buscarCliente(aux);
+        aux.setBastidor(bastidor);//Fuerzo a que el cliente tenga el bastidor que busco
+        int posicion = buscarVehiculo(aux);
 
-        return (posicion >= 0) ? this.listaClientes[posicion] : null;
-
+        return (posicion >= 0) ? this.listaVehiculos[posicion] : null;
     }
 
     public boolean borrarVehiculo(Vehiculo v) {
@@ -125,6 +125,5 @@ public class CatalogoVehiculos {
         return tmp;
     }
 
-    //Metodo Copiar vehiculo que devuelva un array con ese 
-    //
+    
 }

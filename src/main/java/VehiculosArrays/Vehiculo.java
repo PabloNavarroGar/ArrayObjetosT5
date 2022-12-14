@@ -5,7 +5,7 @@
 package VehiculosArrays;
 
 import java.util.Objects;
-import java.util.Random;
+
 import org.apache.commons.lang3.RandomStringUtils;
 
 /**
@@ -23,30 +23,25 @@ public class Vehiculo {
      //Constructor sin parametros que genere vehicuos diferentes con datos diferentes
      //FALTA METER EN EL POM LAS DEPENDECIAS CORRESPONDIENTES. 
      public Vehiculo(){
-         
+         ;
          this.bastidor= String.valueOf(++contador);
          this.matricula=RandomStringUtils.randomNumeric(4);
          this.modelo = Modelo.getAleatorio();
          this.color= Color.getAleatorio();
      }
-     
-     
-    
-     
 
     @Override
     public String toString() {
-        StringBuilder sb = new StringBuilder();
-        sb.append("Vehiculo{");
-        sb.append("bastidor=").append(bastidor);
-        sb.append(", matricula=").append(matricula);
-        sb.append(", color=").append(color);
-        sb.append(", modelo=").append(modelo);
-        sb.append(", disponible=").append(disponible);
-        sb.append(", tarifa=").append(tarifa);
-        sb.append('}');
-        return sb.toString();
+        return "Vehiculo{" + "bastidor=" + bastidor + ", matricula=" + matricula + ", color=" + color + ", modelo=" + modelo + ", disponible=" + disponible + ", tarifa=" + tarifa + '}';
     }
+
+   
+
+  
+     
+     
+   
+    
     //Getters and Setters
     public String getBastidor() {
         return bastidor;

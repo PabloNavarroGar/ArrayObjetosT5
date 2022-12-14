@@ -46,12 +46,12 @@ public class CatalogoCliente {
     //Es una busqueda secuencial , va desde 0 hasta el ultimo
     private int buscarCliente(Cliente c) {
         //se le para el objeto como parametro
-        if( c!=null){
-        for (int i = 0; i < this.listaClientes.length; i++) {
-            if (this.listaClientes[i] != null && c.equals(this.listaClientes[i])) {
-                return i;
+        if (c != null) {
+            for (int i = 0; i < this.listaClientes.length; i++) {
+                if (this.listaClientes[i] != null && c.equals(this.listaClientes[i])) {
+                    return i;
+                }
             }
-        }
         }
         //Como no encuetra ese cliente duevuelve -1
         return -1;

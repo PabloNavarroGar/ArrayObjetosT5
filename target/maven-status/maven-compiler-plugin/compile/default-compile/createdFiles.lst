@@ -1,6 +1,10 @@
-claseviernes\Vehiculo.class
-claseviernes\CatalogoVehiculos.class
-claseviernes\Modelo.class
-claseviernes\EjemploVehiculoEnum.class
-claseviernes\Color.class
-com\mycompany\pasarlimpio\Pasarlimpio.class
+VehiculosArrays\CatalogoCliente.class
+VehiculosArrays\Cliente.class
+VehiculosArrays\NombreCliente.class
+VehiculosArrays\Alquiler.class
+VehiculosArrays\Vehiculo.class
+VehiculosArrays\EjemploVehiculoEnum.class
+VehiculosArrays\Modelo.class
+VehiculosArrays\CatalogoAlquiler.class
+VehiculosArrays\CatalogoVehiculos.class
+VehiculosArrays\Color.class
