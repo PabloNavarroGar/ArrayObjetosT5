@@ -68,7 +68,7 @@ public class CatalogoAlquiler {
 
     }
 
-    //añadir un vehiculo
+    //añadir un alquiler
     public void anadirAlquiler(Alquiler c) {
         //Si hay hueco, se inserta en el hueco
         //Si el numero de vehiculos en menor a la lista de vehiculos

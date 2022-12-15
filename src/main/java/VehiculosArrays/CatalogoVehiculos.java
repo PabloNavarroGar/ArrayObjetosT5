@@ -43,7 +43,7 @@ public class CatalogoVehiculos {
     }
 
     //Es una busqueda secuencial , va desde 0 hasta el ultimo
-    private int buscarVehiculo(Vehiculo v) {
+    private int buscarVehiculo(Vehiculo v ) {
         //se le para el objeto como parametro
         if (v != null) {
             for (int i = 0; i < this.listaVehiculos.length; i++) {

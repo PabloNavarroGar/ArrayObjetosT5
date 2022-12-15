@@ -114,18 +114,24 @@ public class EjemploVehiculoEnum {
         
 
         
-//        Alquiler a = new Alquiler(c, vehiculo1, LocalDate.now(), 1);
-//        System.out.println(c);
-//        System.out.println(vehiculo1);
-//        System.out.println(a);
+        Alquiler a = new Alquiler(c, v1, LocalDate.now(), 1);
+      
         
-        //CatalogoAlquiler ca = new CatalogoAlquiler(10);
+        CatalogoAlquiler ca = new CatalogoAlquiler(10);
+       
+        ca.anadirAlquiler(a);
         
-       // ca.anadirAlquiler(a);
+       
         
-//        System.out.println("Catalogo de alquileres");
-//        
-//        System.out.println(ca);
+        
+        
+        
+ 
+      
+        
+        
+        
+       //e1.registarAlquiler(String nif,String Vehiculo, LocalDate.now(), 45);
     }
 
 }
