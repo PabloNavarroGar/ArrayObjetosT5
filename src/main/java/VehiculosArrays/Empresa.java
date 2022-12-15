@@ -8,6 +8,7 @@ import java.time.LocalDate;
 import java.util.Arrays;
 import java.util.Objects;
 import java.util.Objects;
+import java.util.Scanner;
 
 import org.apache.commons.lang3.RandomStringUtils;
 /**
@@ -15,7 +16,7 @@ import org.apache.commons.lang3.RandomStringUtils;
  * @author samue
  */
 public class Empresa {
-
+     public static Scanner teclado = new Scanner(System.in);
     private String cif;
     private String nombre;
 
@@ -23,7 +24,7 @@ public class Empresa {
     private CatalogoVehiculos catalogoDeVehiculos;
     private CatalogoAlquiler catalogoDeAlquileres;
 
-    public Empresa(String nombre, String cif, CatalogoCliente catalogoDeClientes, CatalogoVehiculos catalogoDeVehiculos, CatalogoAlquiler catalogoDeAlquileres) {
+    public Empresa(String nombre, CatalogoCliente catalogoDeClientes, CatalogoVehiculos catalogoDeVehiculos, CatalogoAlquiler catalogoDeAlquileres) {
         this.nombre = nombre;
         this.cif = RandomStringUtils.random(5);
         this.catalogoDeClientes = catalogoDeClientes;
@@ -151,5 +152,74 @@ public class Empresa {
             a.getVehiculo().setDisponible(true);
         }
         
+    }
+    
+   
+    
+     public Cliente leerTecladoCliente() {
+        //creamos objeto de tipo serie
+
+        Cliente cliente;
+        
+        //Leer por teclado e instanciar
+        System.out.println("Nombre del cliente");
+        String nombreCliente = teclado.nextLine();
+        System.out.println("Apellidos del cliente");
+        String apellidoCliente = teclado.nextLine();
+        System.out.println("Dni del cliente");
+        String nifCliente = teclado.nextLine();
+      
+        //Instancias el objeto
+        
+        cliente = new Cliente(nombreCliente, apellidoCliente, nifCliente);
+        
+        //Devolvemos el tipo serie
+        return cliente;
+    }
+     
+     public  Vehiculo leerTecladoVehiculo() {
+        //creamos objeto de tipo serie
+
+        Vehiculo vehiculo;
+        
+        //Leer por teclado e instanciar
+        System.out.println("Numero del Bastidor del Vehiculo");
+        String bastidorVehiculo = teclado.nextLine();
+        System.out.println("Numero Matricula Vehiculo");
+        String matriculaVehiculo = teclado.nextLine();
+        System.out.println("Color del Vehiculo");
+        String colorVehiculo = teclado.nextLine();
+        System.out.println("Modelo del Vehiculo");
+        String modeloVehiculo = teclado.nextLine();
+      
+        //Instancias el objeto
+        
+        vehiculo = new Vehiculo(bastidorVehiculo, matriculaVehiculo, colorVehiculo, modeloVehiculo);
+        
+        //Devolvemos el tipo serie
+        return vehiculo;
+    }
+     
+     
+     public  Alquiler leerTecladoAlquiler() {
+        //creamos objeto de tipo serie
+
+        Alquiler alquiler;
+        
+        //Leer por teclado e instanciar
+      
+        System.out.println("Nombre del Cliente");
+        Cliente auxCli = leerTecladoCliente();
+        System.out.println("Vehiculo");
+        Vehiculo auxVe=leerTecladoVehiculo();
+        System.out.println("Modelo del Vehiculo");
+        int duracionAlquiler = teclado.nextInt();
+      
+        //Instancias el objeto
+        
+        //alquiler = new Alquiler(, vehiculo, LocalDate.MIN, 0);
+        alquiler = new Alquiler(auxCli, auxVe, LocalDate.MIN, duracionAlquiler);
+        //Devolvemos el tipo serie
+        return alquiler;
     }
 }

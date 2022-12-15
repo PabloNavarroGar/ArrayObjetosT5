@@ -5,6 +5,7 @@
 package VehiculosArrays;
 
 import java.time.LocalDate;
+import org.apache.commons.lang3.RandomStringUtils;
 
 /**
  *
@@ -17,7 +18,8 @@ public class Alquiler {
     private Vehiculo vehiculo;
     private LocalDate fechaInicio;
     private int duracion;
-    
+   
+    private String alquilerID2;
     private static int contador=0;
     public Alquiler(Cliente cliente, Vehiculo vehiculo, LocalDate fechaInicio, int duracion) {
         this.cliente = cliente;
@@ -27,6 +29,15 @@ public class Alquiler {
         contador++;
         this.alquierID=contador;
     }
+
+    public Alquiler(String AlquilerID, Cliente cliente, Vehiculo vehiculo, int duracion) {
+        this.alquilerID2 = RandomStringUtils.random(4);
+        this.cliente = cliente;
+        this.vehiculo = vehiculo;
+        this.fechaInicio = LocalDate.now();
+        this.duracion = duracion;
+    }
+    
 
     public Alquiler() {
     }

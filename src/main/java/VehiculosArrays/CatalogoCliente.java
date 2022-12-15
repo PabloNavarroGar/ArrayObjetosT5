@@ -4,6 +4,7 @@
  */
 package VehiculosArrays;
 
+import static VehiculosArrays.Empresa.teclado;
 import java.util.Arrays;
 
 /**
@@ -111,4 +112,7 @@ public class CatalogoCliente {
         }
         return tmp;
     }
+    
+    
+  
 }

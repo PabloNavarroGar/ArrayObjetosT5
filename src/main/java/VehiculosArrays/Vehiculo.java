@@ -16,7 +16,9 @@ public class Vehiculo {
      private String bastidor;
      private String matricula;
      private Color color;
+     private String color2;
      private Modelo modelo;
+      private String modelo2;
      private boolean disponible;
      private double tarifa;
      private static int contador=0;
@@ -29,6 +31,15 @@ public class Vehiculo {
          this.modelo = Modelo.getAleatorio();
          this.color= Color.getAleatorio();
      }
+
+    public Vehiculo(String bastidor, String matricula, String color, String modelo) {
+        this.bastidor = bastidor;
+        this.matricula = matricula;
+        this.color2 = color;
+        this.modelo2 = modelo;
+       
+    }
+     
 
      
     @Override

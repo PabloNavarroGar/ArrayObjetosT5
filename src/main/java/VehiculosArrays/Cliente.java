@@ -13,30 +13,31 @@ import org.apache.commons.lang3.RandomStringUtils;
  */
 public class Cliente {
 
-    
     private String nombre;
     private String apellidos;
     private String nif;
-    private static int contador= 0;
-    
+    private static int contador = 0;
+
     public Cliente(String nombre, String apellidos) {
         this.nombre = nombre;
         this.apellidos = apellidos;
         contador++;
-        this. nif = String.valueOf(contador);
+        this.nif = String.valueOf(contador);
+    }
+
+    public Cliente(String nombre, String apellidos, String nif) {
+        this.nombre = nombre;
+        this.apellidos = apellidos;
+
+        this.nif = nif;
+
     }
 
     public Cliente() {
-        this.nombre = RandomStringUtils.randomAlphabetic(4);
-        this.apellidos = RandomStringUtils.randomAlphabetic(3);
-        contador++;
-        this. nif = String.valueOf(contador);
-        
-        
     }
     
     
-    
+
 //    private static String generarNIF() {
 //        //Declaramos los char de las letras
 //
@@ -110,24 +111,5 @@ public class Cliente {
         final Cliente other = (Cliente) obj;
         return Objects.equals(this.nif, other.nif);
     }
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
+
 }
