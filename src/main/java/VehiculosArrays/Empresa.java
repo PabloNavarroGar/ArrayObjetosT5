@@ -156,7 +156,7 @@ public class Empresa {
     
    
     
-     public Cliente leerTecladoCliente() {
+     public Cliente introducirTecladoCliente() {
         //creamos objeto de tipo serie
 
         Cliente cliente;
@@ -169,7 +169,7 @@ public class Empresa {
         System.out.println("Dni del cliente");
         String nifCliente = teclado.nextLine();
       
-        //Instancias el objeto
+        //Instancias el objeto que obtiene el constructo de la clase cliente
         
         cliente = new Cliente(nombreCliente, apellidoCliente, nifCliente);
         
@@ -177,7 +177,7 @@ public class Empresa {
         return cliente;
     }
      
-     public  Vehiculo leerTecladoVehiculo() {
+     public  Vehiculo introducirTecladoVehiculo() {
         //creamos objeto de tipo serie
 
         Vehiculo vehiculo;
@@ -201,7 +201,7 @@ public class Empresa {
     }
      
      
-     public  Alquiler leerTecladoAlquiler() {
+     public  Alquiler introducirTecladoAlquiler() {
         //creamos objeto de tipo serie
 
         Alquiler alquiler;
@@ -209,16 +209,16 @@ public class Empresa {
         //Leer por teclado e instanciar
       
         System.out.println("Nombre del Cliente");
-        Cliente auxCli = leerTecladoCliente();
+        Cliente auxCli = introducirTecladoCliente();
         System.out.println("Vehiculo");
-        Vehiculo auxVe=leerTecladoVehiculo();
+        Vehiculo auxVe=introducirTecladoVehiculo();
         System.out.println("Modelo del Vehiculo");
         int duracionAlquiler = teclado.nextInt();
       
         //Instancias el objeto
         
         //alquiler = new Alquiler(, vehiculo, LocalDate.MIN, 0);
-        alquiler = new Alquiler(auxCli, auxVe, LocalDate.MIN, duracionAlquiler);
+        alquiler = new Alquiler(auxCli, auxVe, LocalDate.now(), duracionAlquiler);
         //Devolvemos el tipo serie
         return alquiler;
     }

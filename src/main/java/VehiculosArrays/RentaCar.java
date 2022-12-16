@@ -33,7 +33,7 @@ public class RentaCar {
 
             switch (opcion) {
                 case "1":
-                    Cliente auxCli = RentaCarEstepona.leerTecladoCliente();
+                    Cliente auxCli = RentaCarEstepona.introducirTecladoCliente();
                    
                     
                     System.out.println("-------------------");
@@ -42,13 +42,13 @@ public class RentaCar {
                     break;
                 case "2":
                    
-                    Vehiculo auxVe = RentaCarEstepona.leerTecladoVehiculo();
+                    Vehiculo auxVe = RentaCarEstepona.introducirTecladoVehiculo();
                     System.out.println("-------------------");
                     System.out.println(auxVe);
                     break;
                 case "3":
                    
-                    Alquiler auxAl = RentaCarEstepona. leerTecladoAlquiler();
+                    Alquiler auxAl = RentaCarEstepona. introducirTecladoAlquiler();
                     System.out.println("-------------------");
                     
                     System.out.println(auxAl);
