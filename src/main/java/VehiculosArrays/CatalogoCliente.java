@@ -59,7 +59,7 @@ public class CatalogoCliente {
     }
 
     public Cliente buscarCliente(String nif) {
-        Cliente aux = new Cliente();
+        Cliente aux = new Cliente();//Usa un constructor vacio debido a que se introduciran los datos por teclado
 
         aux.setNif(nif);//Fuerzo a que el cliente tenga el nif que busco
         int posicion = buscarCliente(aux);

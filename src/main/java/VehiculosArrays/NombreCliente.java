@@ -11,7 +11,7 @@ import java.util.Random;
  * @author pablo
  */
 public enum NombreCliente {
-    
+    //Clase creada para dar nombre aleatorios, de momento, uso para repasar
     JUAN,MARCOS,SAMUEL,TOMAS,PABLO,NACHO,LAURA,EVA,MARIA,ANA;
     //Metodo para poner un nombre aleatorio escrito a los de arriba, 
     //Se crea el metodo, se usara la variable Cliente en el array
